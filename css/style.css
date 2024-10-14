@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #191919;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    background-image: url('../img/Contact1.png');
+    background-size: contain;
+    min-height: 1500px;
+    background-repeat: no-repeat;
+    font-family: 'Poppins';
+
+}
+
+#who, #real, #contact {
+    flex: 1; 
+}
+
+footer {
+    background-image: url('../img/footer2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px; 
+}
+
+h5 {
+    color: white;
+    height: 200px;
+    width: 99vw;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+nav .button-navigation {
+    display: flex;
+    align-items: center;
+}
+
+nav .button-navigation ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav .button-navigation ul li {
+    list-style-type: none;
+    white-space: nowrap;
+    padding: 0 15px;
+    border-right: 1px solid white; 
+}
+
+nav .button-navigation ul li:last-child {
+    border-right: none; 
+}
+
+nav .logo img {
+    width: 8%;
+    border-radius: 20%;
+}
+
+
+ul li a {
+    position: relative; 
+    text-decoration: none; 
+    color: white;
+    padding-bottom: 5px; 
+    transition: color 0.3s ease; 
+}
+
+
+ul li a::after {
+    content: ''; /* Nécessaire pour générer un pseudo-élément */
+    position: absolute;
+    width: 0; 
+    height: 2px; 
+    bottom: 0; 
+    left: 0; 
+    background-color: #252426; 
+    transition: width 0.3s ease; 
+}
+
+
+ul li a:hover::after {
+    width: 100%; 
+}
+
+ul li a:hover {
+    color: #A300CC; 
+}
+
+.big-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 60px;
+    width: 80%;
+    margin: 100px auto;
+}
+
+.one-card-content {
+    background-color: #252426;
+    border-radius: 20px;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 1px;
+}
+
+.course-circle-right, .course-circle-left {
+    width: 33%;
+    margin: auto;
+}
+
+.course-circle-left {
+    border-left: #a300cc75 2px solid;
+}
+
+.course-circle-right {
+    border-right: #a300cc75 2px solid;
+}
+
+
+.circle {
+    width: 100px;               
+    height: 100px;              
+    background-color: #A300CC;     
+    color: white;              
+    border-radius: 50%;        
+    display: flex;             
+    justify-content: center;   
+    align-items: center;       
+    font-size: 35px;           
+    font-weight: bold;         
+    margin: auto;
+}
+
+.course-content-right, .course-content-left {
+    width: 50%;
+    color: white;
+    text-align: justify;
+}
+
+.course-content-right {
+    margin-right: 7%;
+}
+
+.course-content-left {
+    margin-left: 7%;
+}
+
+
+.first-course, .second-course, .third-course, .fourth-course {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 2% 0;
+    border-bottom: #fdfdff25 2px solid;
+}
+
+.second-course, .fourth-course {
+    flex-direction: row-reverse;
+}
+
+.informations {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.informations p {
+    color: white;
+    font-style: italic;
+}
+
+.one-card-content .content, .two-card-content .content {
+    width: 80%;
+    margin: 25px auto;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.one-card-content .content p, .two-card-content .content p {
+    text-align: justify;
+    color: white;
+}
+
+.one-card-content #pro .content p, .one-card-content #academic .content p {
+    width: 60%;
+}
+
+.title {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.two-card-content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px ;
+    margin-bottom: 30px;
+}
+
+.mid-card-content {
+    background-color: #252426;
+    border-radius: 20px;
+    width: 40%;
+}
+
+.mid-card-content ul li {
+    color: white;
+}
+
+ul li::marker {
+    color: #A300CC; 
+}
+
+/* Page réalisation */
+
+br {
+    margin-bottom: 20px; /* Ajuste la valeur pour obtenir l'écart souhaité */
+    display: block; /* Assure que la marge s'applique correctement */
+    content: ""; /* Ajoute un espace pour la marge */
+}
+
+.title-content {
+    width: 80%;
+    margin: auto;
+}
+
+.title-content h3 {
+    color: white;
+    display: inline-block;
+    font-style: italic;
+}
+
+/* Carrousel */
+
+.carousel-container {
+    position: relative;
+    width: 30%;
+    max-width: 700px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-academic, 
+.carousel-academic2, 
+.carousel-academic3, 
+.carousel-academic4, 
+.carousel-academic5, 
+.carousel-academic6, 
+.carousel-pro {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Modifier en fonction du nombre d'images */
+}
+
+.carousel-image-academic, 
+.carousel-image-academic2, 
+.carousel-image-academic3, 
+.carousel-image-academic4, 
+.carousel-image-academic5, 
+.carousel-image-academic6, 
+.carousel-image-pro {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-25%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+.prev{
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#real .one-card-content .choice ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#real .one-card-content .choice ul li {
+    list-style-type: none;
+}
+
+#real .one-card-content .choice ul li a {
+    color: rgb(114, 60, 105);
+    text-decoration: none;
+}
+
+#real .one-card-content .choice ul li a::after {
+    background-color: #EFF6EE; 
+}
+
+#real .one-card-content .choice ul li a:hover {
+    color: #A300CC; 
+}
+
+/* Page contact */
+
+#contact .content .one-card-content .form {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#contact .content .one-card-content .form .check h5 {
+    display: none;
+    color: red;
+}
+
+
+/* Style de base pour l'alignement */
+.form-group {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+}
+
+
+label {
+    width: 150px;
+    text-align: right;
+    margin-right: 10px; 
+    font-weight: bold;
+    color: #EFF6EE;
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 300px; 
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+}
+
+
+textarea {
+    height: 300px; 
+    resize: none; 
+}
+
+
+input[type="submit"] {
+    margin: auto;
+    padding: 10px 20px;
+    background-color: rgb(114, 60, 105); 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #A300CC;
+}
+
+
