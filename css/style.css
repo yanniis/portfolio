@@ -168,7 +168,7 @@ ul li a:hover {
     margin: auto;
     padding: 2% 0;
     border-bottom: #fdfdff25 2px solid;
-}
+} 
 
 .second-course, .fourth-course {
     flex-direction: row-reverse;
