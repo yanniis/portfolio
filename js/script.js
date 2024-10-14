@@ -2,9 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
   
 const whoButton = document.getElementById('1');
 const realButton = document.getElementById('2');
+const resumeButton = document.getElementById('3');
 const contactButton = document.getElementById('4');
 const whoDiv = document.getElementById('who');
 const realDiv = document.getElementById('real');
+const resumeDiv = document.getElementById('resume');
 const contactDiv = document.getElementById('contact');
 
 
@@ -12,6 +14,7 @@ realButton.addEventListener('click', function(event) {
     event.preventDefault(); 
     whoDiv.style.display = 'none';
     realDiv.style.display = 'block';
+    resumeDiv.style.display ='none';
     contactDiv.style.display = 'none';
 });
 
@@ -19,14 +22,24 @@ realButton.addEventListener('click', function(event) {
 whoButton.addEventListener('click', function(event) {
     event.preventDefault();  
     whoDiv.style.display = 'block';  
-    realDiv.style.display = 'none'; 
+    realDiv.style.display = 'none';
+    resumeDiv.style.display ='none'; 
     contactDiv.style.display = 'none';  
 });
+
+resumeButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    whoDiv.style.display = 'none';  
+    realDiv.style.display = 'none';
+    resumeDiv.style.display ='block'; 
+    contactDiv.style.display = 'none'; 
+})
 
 contactButton.addEventListener('click', function(event) {
     event.preventDefault();  
     whoDiv.style.display = 'none';  
-    realDiv.style.display = 'none'; 
+    realDiv.style.display = 'none';
+    resumeDiv.style.display ='none'; 
     contactDiv.style.display = 'block';  
 });
 
