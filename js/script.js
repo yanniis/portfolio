@@ -78,7 +78,9 @@ document.querySelectorAll('.carousel-container').forEach((container) => {
         [data-images="${carouselName}"] .carousel-image-academic4, 
         [data-images="${carouselName}"] .carousel-image-academic5,
         [data-images="${carouselName}"] .carousel-image-academic6, 
-        [data-images="${carouselName}"] .carousel-image-pro`);
+        [data-images="${carouselName}"] .carousel-image-pro,
+        [data-images="${carouselName}"] .carousel-image-pro2,
+        [data-images="${carouselName}"] .carousel-image-pro3`);
 
     carousels[carouselName].totalImages = images.length;
 

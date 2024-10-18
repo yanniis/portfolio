@@ -70,6 +70,10 @@ nav .logo img {
     border-radius: 20%;
 }
 
+#academic .content-image img {
+    width: 50%;
+    border-radius: 20px;
+}
 
 ul li a {
     position: relative; 
@@ -268,7 +272,9 @@ br {
 .carousel-academic4, 
 .carousel-academic5, 
 .carousel-academic6, 
-.carousel-pro {
+.carousel-pro,
+.carousel-pro2,
+.carousel-pro3 {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%; /* Modifier en fonction du nombre d'images */
@@ -280,7 +286,9 @@ br {
 .carousel-image-academic4, 
 .carousel-image-academic5, 
 .carousel-image-academic6, 
-.carousel-image-pro {
+.carousel-image-pro,
+.carousel-image-pro2,
+.carousel-image-pro3 {
     width: 100%;
     border-radius: 10px;
 }
