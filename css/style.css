@@ -70,9 +70,9 @@ nav .logo img {
     border-radius: 20%;
 }
 
-#academic .content-image img {
-    width: 50%;
-    border-radius: 20px;
+.content-image img {
+    width: 30%;
+    border-radius: 15px;
 }
 
 ul li a {
@@ -339,6 +339,18 @@ br {
 
 #real .one-card-content .choice ul li a:hover {
     color: #A300CC; 
+}
+
+/* Page résumé */
+
+.one-card-content .cv {
+    display: flex;
+    justify-content: center;
+}
+
+.one-card-content .cv img {
+    width: 60%;
+    margin-bottom: 20px;
 }
 
 /* Page contact */
