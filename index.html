@@ -168,6 +168,12 @@
                 <p>Le projet CatchyParty, réalisé avec Vue.js, utilise le Virtual DOM pour des performances optimales. Il est né de l&#39;envie de créer un jeu musical en ligne, simple et accessible, permettant à des groupes d&#39;amis de s&#39;amuser ensemble. "CatchyParty" combine les termes "catchy" et "party", évoquant une musique accrocheuse et une ambiance festive. La plateforme permet de créer des salles de jeu privées et propose plusieurs manches de jeux, avec la possibilité de personnaliser l&#39;expérience. Le design du site utilise des couleurs vives, principalement du bleu pour représenter l&#39;émotion musicale et un effet de profondeur pour une immersion complète. Des personnages graphiques et une touche de jaune doré pour les éléments essentiels assurent une cohérence visuelle. Le style épuré maintient l&#39;attention sur le jeu, offrant une expérience dynamique et plaisante.</p>
             </div>
 
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+                <div id="caption"></div>
+            </div>
+
             <div class="content content-image">
                 <img src="./img/CatchyParty/KBNotes.png" alt="">
                 <p>Dans le développement de Keyboard-notes, les joueurs commencent par entrer le nom d'une musique qu'ils souhaitent faire deviner aux autres. Ces noms sont envoyés au serveur et attribués à d'autres joueurs. Ensuite, chaque joueur crée la musique en utilisant des notes de piano, qu'ils peuvent tester via un bouton de prévisualisation. Les notes sont ajoutées dans une div via un système de drag & drop, et les joueurs peuvent ajuster la durée et l'intervalle des notes avec des sliders. Une fois le temps écoulé, les notes sont redistribuées aléatoirement et les joueurs doivent deviner la musique. Le front-end a été redesigné pour améliorer l'expérience utilisateur, influençant également le développement back-end. Un tableau de rewind permet de retracer les actions des joueurs, avec des données structurées et accessibles. Les méthodes rewindBtns() et submitIdea() gèrent l'affichage et l'envoi des informations de rewind.

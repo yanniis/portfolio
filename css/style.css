@@ -418,3 +418,51 @@ input[type="submit"]:hover {
 }
 
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #252426;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 70%;
+    max-height: 70%;
+    padding-top: 10%;
+}
+
+/* Fermer le modal */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Caption en-dessous de l'image */
+#caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Changer la taille de l'image quand la fenêtre change de taille */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}

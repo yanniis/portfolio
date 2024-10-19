@@ -114,6 +114,35 @@ function changeSlide(carouselName, direction) {
 //         changeSlide(carouselName, 1);
 //     });
 // }, 5000);
+
+  // Sélectionner le modal
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const captionText = document.getElementById("caption");
+  const closeModal = document.getElementsByClassName("close")[0];
+
+  // Lorsque l'utilisateur clique sur une image dans le carrousel
+  document.querySelectorAll('.carousel-image-academic').forEach(img => {
+      img.addEventListener('click', function() {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+      });
+  });
+
+  // Fermer le modal quand on clique sur le X
+  closeModal.addEventListener('click', function() {
+      modal.style.display = "none";
+  });
+
+  // Fermer le modal quand on clique en dehors de l'image
+  modal.addEventListener('click', function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  });
+
+
 });
 
 
