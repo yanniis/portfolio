@@ -238,10 +238,27 @@ ul li::marker {
 
 /* Page réalisation */
 
+.button-group {
+    width: 90%;
+}
+
+.button-group button {
+    background-color: #A300CC;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.button-group button:hover {
+    color: red;
+}
+
 br {
-    margin-bottom: 20px; /* Ajuste la valeur pour obtenir l'écart souhaité */
-    display: block; /* Assure que la marge s'applique correctement */
-    content: ""; /* Ajoute un espace pour la marge */
+    margin-bottom: 20px; 
+    display: block; 
+    content: ""; 
 }
 
 .title-content {

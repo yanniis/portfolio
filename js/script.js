@@ -108,7 +108,6 @@ function changeSlide(carouselName, direction) {
     showSlide(carouselName, carousels[carouselName].index + direction);
 }
 
-// Si besoin, un auto-slide (décommenter pour activer l'auto-slide)
 // setInterval(() => {
 //     Object.keys(carousels).forEach((carouselName) => {
 //         changeSlide(carouselName, 1);
