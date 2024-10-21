@@ -63,6 +63,62 @@ academicButton.addEventListener('click', function(event) {
     proDiv.style.display = "none";
 })
 
+const CPButton = document.getElementById('CatchyParty');
+const CSButton = document.getElementById('CyberSecurite');
+const M3Button = document.getElementById('Musculator');
+const SKButton = document.getElementById('SpeedKing');
+const TPButton = document.getElementById('Typrotect');
+const CPDiv = document.getElementById('CP');
+const CSDiv = document.getElementById('CS');
+const M3Div = document.getElementById('M3');
+const SKDiv = document.getElementById('SK');
+const TPDiv = document.getElementById('TP');
+
+CPButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    CPDiv.style.display = 'block';
+    CSDiv.style.display = 'none';
+    M3Div.style.display = 'none';
+    SKDiv.style.display = 'none';
+    TPDiv.style.display = 'none';
+})
+
+CSButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    CPDiv.style.display = 'none';
+    CSDiv.style.display = 'block';
+    M3Div.style.display = 'none';
+    SKDiv.style.display = 'none';
+    TPDiv.style.display = 'none';
+})
+
+M3Button.addEventListener('click', function(event) {
+    event.preventDefault();
+    CPDiv.style.display = 'none';
+    CSDiv.style.display = 'none';
+    M3Div.style.display = 'block';
+    SKDiv.style.display = 'none';
+    TPDiv.style.display = 'none';
+})
+
+SKButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    CPDiv.style.display = 'none';
+    CSDiv.style.display = 'none';
+    M3Div.style.display = 'none';
+    SKDiv.style.display = 'block';
+    TPDiv.style.display = 'none';
+})
+
+TPButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    CPDiv.style.display = 'none';
+    CSDiv.style.display = 'none';
+    M3Div.style.display = 'none';
+    SKDiv.style.display = 'none';
+    TPDiv.style.display = 'block';
+})
+
 
 // Index pour chaque carrousel
 const carousels = {};
@@ -114,6 +170,7 @@ function changeSlide(carouselName, direction) {
 //     });
 // }, 5000);
 
+function initializeModal() {
   // Sélectionner le modal
   const modal = document.getElementById("imageModal");
   const modalImg = document.getElementById("modalImage");
@@ -121,7 +178,7 @@ function changeSlide(carouselName, direction) {
   const closeModal = document.getElementsByClassName("close")[0];
 
   // Lorsque l'utilisateur clique sur une image dans le carrousel
-  document.querySelectorAll('.carousel-image-academic').forEach(img => {
+  document.querySelectorAll('.carousel-image-academic, .carousel-image-academic2, .carousel-image-academic3, .carousel-image-academic4, .carousel-image-academic5, .carousel-image-academic6, .carousel-image-pro, .carousel-image-pro2, .carousel-image-pro3').forEach(img => {
       img.addEventListener('click', function() {
           modal.style.display = "block";
           modalImg.src = this.src;
@@ -140,7 +197,7 @@ function changeSlide(carouselName, direction) {
           modal.style.display = "none";
       }
   });
-
+};
 
 });
 

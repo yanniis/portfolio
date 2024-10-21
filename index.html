@@ -152,25 +152,32 @@
 
         <!-- Carrousel Académique -->
         <div id="academic" style="display: block;">
+            
             <div class="button-group">
-                <button id="CatchyParty">Catchy Party</button>
-                <button id="CyberSecurite">CyberS&eacute;curit&eacute;</button>
+                <button id="CatchyParty" onclick="initializeModal()">Catchy Party</button>
+                <button id="CyberSecurite" onclick="initializeModal()">CyberS&eacute;curit&eacute;</button>
+                <button id="Musculator" onclick="initializeModal()">Musculator 3000</button>
+                <button id="SpeedKing">SpeedKing</button>
+                <button id="Typrotect">Typrotect</button>
             </div>
+
+        <div id="CP">
             <div class="title-content">
                 <h3>Catchy Party</h3>
             </div>
             <div class="content">
                 <div class="carousel-container" data-carousel="academic">
                     <div class="carousel carousel-academic" data-images="academic">
-                        <img src="./img/CatchyParty/FirstPage.png" alt="Image 1" class="carousel-image-academic">
-                        <img src="./img/CatchyParty/Description.png" alt="Image 2" class="carousel-image-academic">
-                        <img src="./img/CatchyParty/CharteGraphique.png" alt="Image 3" class="carousel-image-academic">
+                        <img src="./img/CatchyParty/FirstPage.png" alt="Présentation" class="carousel-image-academic">
+                        <img src="./img/CatchyParty/Description.png" alt="Qu'est ce que CatchyParty" class="carousel-image-academic">
+                        <img src="./img/CatchyParty/CharteGraphique.png" alt="Couleurs du projet" class="carousel-image-academic">
                     </div>
                     <button class="prev" data-carousel="academic">&#10094;</button>
                     <button class="next" data-carousel="academic">&#10095;</button>
                 </div>
                 <p>Le projet CatchyParty, réalisé avec Vue.js, utilise le Virtual DOM pour des performances optimales. Il est né de l&#39;envie de créer un jeu musical en ligne, simple et accessible, permettant à des groupes d&#39;amis de s&#39;amuser ensemble. "CatchyParty" combine les termes "catchy" et "party", évoquant une musique accrocheuse et une ambiance festive. La plateforme permet de créer des salles de jeu privées et propose plusieurs manches de jeux, avec la possibilité de personnaliser l&#39;expérience. Le design du site utilise des couleurs vives, principalement du bleu pour représenter l&#39;émotion musicale et un effet de profondeur pour une immersion complète. Des personnages graphiques et une touche de jaune doré pour les éléments essentiels assurent une cohérence visuelle. Le style épuré maintient l&#39;attention sur le jeu, offrant une expérience dynamique et plaisante.</p>
             </div>
+        
 
             <div id="imageModal" class="modal">
                 <span class="close">&times;</span>
@@ -195,7 +202,9 @@
                 <p>Classico est un jeu pour les amateurs de musique classique, mettant à l'épreuve la mémoire auditive et offrant des anecdotes sur les musiques et leurs compositeurs. Le jeu se déroule en plusieurs manches où les joueurs doivent identifier la bonne musique parmi trois propositions dans un temps imparti. Les réponses révèlent l'auteur, la bonne musique, sa date de création et une anecdote. Les musiques et situations sont stockées dans un fichier JSON et les fichiers mp3 sont hébergés en ligne. Le joueur avec le plus de bonnes réponses gagne, ajoutant un aspect compétitif. Le choix de la musique classique est motivé par des considérations de droits d'auteur et un désir d'ajouter une dimension éducative et culturelle à la plateforme.
                 </p>
             </div>
+        </div>
 
+        <div id="CS">
             <div class="title-content">
                 <h3>Cybers&eacute;curit&eacute;</h3>
             </div>
@@ -203,9 +212,9 @@
                 <div class="carousel-container" data-carousel="academic2">
                     <div class="carousel carousel-academic" data-images="academic2">
 
-                        <img src="./img/CyberSecurite/Accueil.png" alt="Image 1" class="carousel-image-academic2">
-                        <img src="./img/CyberSecurite/ExempleAttaque.png" alt="Image 3" class="carousel-image-academic2">
-                        <img src="./img/CyberSecurite/ExempleFaillibleXss.png" alt="Image 4" class="carousel-image-academic2">
+                        <img src="./img/CyberSecurite/Accueil.png" alt="Présentation du site éducatif Cybersécurité" class="carousel-image-academic2">
+                        <img src="./img/CyberSecurite/ExempleAttaque.png" alt="Attaque XSS" class="carousel-image-academic2">
+                        <img src="./img/CyberSecurite/ExempleFaillibleXss.png" alt="Code Faillible attque XSS" class="carousel-image-academic2">
                     </div>
                     <button class="prev" data-carousel="academic2">&#10094;</button>
                     <button class="next" data-carousel="academic2">&#10095;</button>
@@ -219,7 +228,9 @@
                     Le fait de devoir réaliser une  page vulnérable et une page protégée permet de comprendre de manière plus approfondie le fonctionnement et le risque de ces attaques. 
                     </p>
             </div>
+        </div>
 
+        <div id="M3">
             <div class="title-content">
                 <h3>Musculator 3000</h3>
             </div>
@@ -227,10 +238,10 @@
                 <div class="carousel-container" data-carousel="academic3">
                     <div class="carousel carousel-academic" data-images="academic3">
 
-                        <img src="./img/Musculator3000/1.png" alt="Image 1" class="carousel-image-academic3">
-                        <img src="./img/Musculator3000/9.png" alt="Image 3" class="carousel-image-academic3">
-                        <img src="./img/Musculator3000/Form.png" alt="Image 4" class="carousel-image-academic3">
-                        <img src="./img/Musculator3000/MenuBurger.png" alt="Image 2" class="carousel-image-academic3">
+                        <img src="./img/Musculator3000/1.png" alt="Présenation Musculator3000" class="carousel-image-academic3">
+                        <img src="./img/Musculator3000/9.png" alt="Charte Graphique" class="carousel-image-academic3">
+                        <img src="./img/Musculator3000/Form.png" alt="Formulaire pour avoir son programme" class="carousel-image-academic3">
+                        <img src="./img/Musculator3000/MenuBurger.png" alt="Menu Burger" class="carousel-image-academic3">
                     </div>
                     <button class="prev" data-carousel="academic3">&#10094;</button>
                     <button class="next" data-carousel="academic3">&#10095;</button>
@@ -244,17 +255,19 @@
                 Musculator 3000 vise à fournir une expérience complète, de l&#39;élaboration des programmes d&#39;entraînement à la construction d&#39;une communauté engagée, offrant ainsi une plateforme robuste pour les passionnés de fitness.
                     </p>
             </div>
+        </div>
 
+        <div id="SK">
             <div class="title-content">
                 <h3>SpeedKing</h3>
             </div>
             <div class="content">
                 <div class="carousel-container" data-carousel="academic4">
                     <div class="carousel carousel-academic" data-images="academic4">
-                        <img src="./img/SpeedKing/FirstPage.png" alt="Image 1" class="carousel-image-academic4">
-                        <img src="./img/SpeedKing/CreatorPresentation.png" alt="Image 3" class="carousel-image-academic4">
-                        <img src="./img/SpeedKing/ExecutiveSummary.png" alt="Image 4" class="carousel-image-academic4">
-                        <img src="./img/SpeedKing/Forecast.png" alt="Image 2" class="carousel-image-academic4">
+                        <img src="./img/SpeedKing/FirstPage.png" alt="Présentation de SpeedKing" class="carousel-image-academic4">
+                        <img src="./img/SpeedKing/CreatorPresentation.png" alt="Présentation des créateurs" class="carousel-image-academic4">
+                        <img src="./img/SpeedKing/ExecutiveSummary.png" alt="Résumé Exécutif" class="carousel-image-academic4">
+                        <img src="./img/SpeedKing/Forecast.png" alt="Prévisions sur 5 ans" class="carousel-image-academic4">
                     </div>
                     <button class="prev" data-carousel="academic4">&#10094;</button>
                     <button class="next" data-carousel="academic4">&#10095;</button>
@@ -266,7 +279,9 @@
                     Lors de ce projet, nous avons pris l&#39;initiative de créer un logo représentant au mieux notre entreprise de location. Nous avions imaginé un entreprise permettant la location de véhicules, sportifs ou luxueux mais également des baptêmes sur circuit accompagné de pilotes confirmés.     
                 </p>
             </div>
+        </div>
 
+        <div id="TP">
             <div class="title-content">
                 <h3>Typrotect</h3>
             </div>
@@ -274,10 +289,10 @@
                 <div class="carousel-container" data-carousel="academic5">
                     <div class="carousel carousel-academic" data-images="academic5">
 
-                        <img src="./img/Typrotect/FirstGraphicCharter.png" alt="Image 1" class="carousel-image-academic5">
-                        <img src="./img/Typrotect/Colors.png" alt="Image 3" class="carousel-image-academic5">
-                        <img src="./img/Typrotect/Typography.png" alt="Image 4" class="carousel-image-academic5">
-                        <img src="./img/Typrotect/Deformations.png" alt="Image 2" class="carousel-image-academic5">
+                        <img src="./img/Typrotect/FirstGraphicCharter.png" alt="Présentation de la Charte Graphique" class="carousel-image-academic5">
+                        <img src="./img/Typrotect/Colors.png" alt="Logo et Insigne" class="carousel-image-academic5">
+                        <img src="./img/Typrotect/Typography.png" alt="Typographie" class="carousel-image-academic5">
+                        <img src="./img/Typrotect/Deformations.png" alt="Déformations interdites" class="carousel-image-academic5">
                     </div>
                     <button class="prev" data-carousel="academic5">&#10094;</button>
                     <button class="next" data-carousel="academic5">&#10095;</button>
@@ -291,11 +306,18 @@
                     En sachant que nous devions réaliser l&#39;entiereté de l&#39;univers de notre marque, nous devions réaliser une charte graphique ainsi qu&#39;élaborer les différentes protection vis-à-vis du logo, que ce soit la zone de protection ou les déformations interdites. 
                     </p>
             </div>
-
+        </div>
         </div>
 
         <!-- Carrousel Professionnel -->
         <div id="pro" style="display: none;">
+
+            <div class="button-group">
+                <button id="VacanSports">VacanSports</button>
+                <button id="HEGP">Hôpital Européen George Pompidou</button>
+            </div>
+
+
             <div class="title-content">
                 <h3>Vacan&#39;Sports</h3>
             </div>
@@ -378,8 +400,13 @@
             <div class="title">
                 <h2>Formulaire de contact</h2>
             </div>
+
             <div class="form">
-                <!-- Utiliser EmailJS -->
+
+                <div class="check">
+                    <h5>Votre mail a bien été envoyé !</h5>
+                </div>
+
                 <form id="contact-form">
                     <div class="form-group">
                         <label for="user_name">Nom et prénom :</label>
@@ -397,10 +424,7 @@
                         <input type="submit" value="Envoyer">
                     </div>
                 </form>
-                
-                <div class="check">
-                    <h5>Votre mail a bien été envoyé !</h5>
-                </div>
+
             </div>
         </div>
     </div>

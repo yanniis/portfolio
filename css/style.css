@@ -31,7 +31,7 @@ footer {
     height: 200px; 
 }
 
-h5 {
+footer h5 {
     color: white;
     height: 200px;
     width: 99vw;
@@ -215,6 +215,10 @@ ul li a:hover {
     text-align: center;
 }
 
+.title h2 {
+    font-size: 2em;
+}
+
 .two-card-content {
     display: flex;
     justify-content: space-around;
@@ -239,20 +243,42 @@ ul li::marker {
 /* Page réalisation */
 
 .button-group {
-    width: 90%;
+    width: 100%;
+    margin: 60px 0;
+    display: flex;
+    justify-content: space-evenly;
+    
 }
 
 .button-group button {
-    background-color: #A300CC;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
+    background-color: #aa00CC;
     color: white;
+    border: none;
+    padding: 0.5% 1%;
+    font-size: 1.1em;
+    letter-spacing: 1px;
     cursor: pointer;
+    border-radius: 10px;
+    font-family: "Poppins";
+    transition: background-color 0.5s ease, 
+                color 0.5s ease, 
+                transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), 
+                letter-spacing 0.5s ease,
+                box-shadow 0.5s ease, 
+                opacity 0.5s ease;
 }
 
 .button-group button:hover {
-    color: red;
+    background-color: #640544;
+    color: #fff;
+    letter-spacing: 3px;
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+}
+
+#CS, #M3, #SK, #TP {
+    display: none;
 }
 
 br {
@@ -336,6 +362,7 @@ br {
 }
 
 #real .one-card-content .choice ul {
+    font-size: 1.3em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -376,7 +403,9 @@ br {
     width: 80%;
     margin: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
     text-align: center;
 }
 
