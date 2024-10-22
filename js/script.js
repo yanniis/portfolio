@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   
-const whoButton = document.getElementById('1');
-const realButton = document.getElementById('2');
-const resumeButton = document.getElementById('3');
-const contactButton = document.getElementById('4');
+const whoButton = document.getElementById('whoButton');
+const realButton = document.getElementById('realButton');
+const resumeButton = document.getElementById('resumeButton');
+const contactButton = document.getElementById('contactButton');
 const whoDiv = document.getElementById('who');
 const realDiv = document.getElementById('real');
 const resumeDiv = document.getElementById('resume');
@@ -37,14 +37,42 @@ resumeButton.addEventListener('click', function(event) {
 
 contactButton.addEventListener('click', function(event) {
     event.preventDefault();  
-    whoDiv.style.display = 'none';  
+    whoDiv.style.display = 'none';
     realDiv.style.display = 'none';
-    resumeDiv.style.display ='none'; 
-    contactDiv.style.display = 'block';  
+    resumeDiv.style.display ='none';
+    contactDiv.style.display = 'block'; 
 });
 
 
 // Page réalisation
+
+    // Sélectionner le modal
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("caption");
+    const closeModal = document.getElementsByClassName("close")[0];
+
+    // Lorsque l'utilisateur clique sur une image dans le carrousel
+    document.querySelectorAll('.carousel-image-academic, .carousel-image-academic2, .carousel-image-academic3, .carousel-image-academic4, .carousel-image-academic5, .carousel-image-academic6, .carousel-image-pro, .carousel-image-pro2, .carousel-image-pro3').forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        });
+    });
+
+    // Fermer le modal quand on clique sur le X
+    closeModal.addEventListener('click', function() {
+        modal.style.display = "none";
+    });
+
+    // Fermer le modal quand on clique en dehors de l'image
+    modal.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+
 
 const academicButton = document.getElementById('A');
 const proButton = document.getElementById('P');
@@ -169,35 +197,6 @@ function changeSlide(carouselName, direction) {
 //         changeSlide(carouselName, 1);
 //     });
 // }, 5000);
-
-function initializeModal() {
-  // Sélectionner le modal
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("modalImage");
-  const captionText = document.getElementById("caption");
-  const closeModal = document.getElementsByClassName("close")[0];
-
-  // Lorsque l'utilisateur clique sur une image dans le carrousel
-  document.querySelectorAll('.carousel-image-academic, .carousel-image-academic2, .carousel-image-academic3, .carousel-image-academic4, .carousel-image-academic5, .carousel-image-academic6, .carousel-image-pro, .carousel-image-pro2, .carousel-image-pro3').forEach(img => {
-      img.addEventListener('click', function() {
-          modal.style.display = "block";
-          modalImg.src = this.src;
-          captionText.innerHTML = this.alt;
-      });
-  });
-
-  // Fermer le modal quand on clique sur le X
-  closeModal.addEventListener('click', function() {
-      modal.style.display = "none";
-  });
-
-  // Fermer le modal quand on clique en dehors de l'image
-  modal.addEventListener('click', function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  });
-};
 
 });
 
