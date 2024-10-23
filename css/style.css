@@ -50,6 +50,7 @@ footer h5 {
     color: white;
     margin-bottom: 20px;
     text-align: center;
+    font-size: 17px;
 }
 
 .social-links {
@@ -192,18 +193,40 @@ ul li a:hover {
 
 
 .circle {
-    width: 100px;               
+    width: 100px;                
     height: 100px;              
-    background-color: #A300CC;     
+    background: radial-gradient(circle, #FF00FF, #A300CC); /* Dégradé radial */    
     color: white;              
-    border-radius: 50%;        
+    border-radius: 60% 40% 30% 70%;  /* valeurs différentes pour chaque coin */
+    transform: rotate(15deg);   /* Rotation pour un effet asymétrique */
     display: flex;             
     justify-content: center;   
     align-items: center;       
     font-size: 35px;           
     font-weight: bold;         
     margin: auto;
+    box-shadow: 
+        5px 5px 15px rgba(0, 0, 0, 0.3),  /* Ombre principale */
+        -5px -5px 15px rgba(255, 255, 255, 0.2), /* Faux reflet */
+        0 0 20px rgba(255, 0, 255, 0.5); /* Effet lumineux coloré */
+    animation: tilt 2s infinite ease-in-out; /* Application de l'animation */
 }
+
+@keyframes tilt {
+    0%, 100% {
+        transform: rotate(0deg); /* Position initiale */
+    }
+    25% {
+        transform: rotate(-15deg); /* Inclinaison vers la gauche */
+    }
+    50% {
+        transform: rotate(0deg); /* Retour au centre */
+    }
+    75% {
+        transform: rotate(15deg); /* Inclinaison vers la droite */
+    }
+}
+
 
 .course-content-right, .course-content-left {
     width: 50%;
@@ -267,6 +290,10 @@ ul li a:hover {
     padding-top: 20px;
     padding-bottom: 30px;
     text-align: center;
+}
+
+.big-title h1 {
+    font-size: 45px;
 }
 
 .title h2 {
@@ -350,14 +377,20 @@ br {
 
 /* Carrousel */
 
+#CS, #M3, #SK, #TP {
+    display: none;
+}
+
 .carousel-container {
     position: relative;
     width: 30%;
     max-width: 700px;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: grid; /* Active le modèle Grid */
+    place-items: center; /* Centre le contenu à la fois verticalement et horizontalement */
 }
+
 
 .carousel-academic, 
 .carousel-academic2, 
