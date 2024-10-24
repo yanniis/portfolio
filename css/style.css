@@ -20,6 +20,10 @@ body {
 
 }
 
+body.no-scroll {
+    overflow: hidden; /* Empêche le défilement */
+}
+
 #who, #real, #contact {
     flex: 1; 
 }
@@ -125,6 +129,38 @@ nav .logo img {
     border-radius: 20%;
 }
 
+/* Style pour le menu burger */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white; /* Couleur de la croix */
+    cursor: pointer; /* Change le curseur au survol */
+    z-index: 1001; /* S'assure que la croix est au-dessus */
+}
+
+nav .button-navigation.active {
+    display: flex; /* Affiche le menu */
+    transform: translateX(0); /* Ramène le menu sur l'écran */
+}
+
 .content-image img {
     width: 30%;
     border-radius: 15px;
@@ -176,6 +212,7 @@ ul li a:hover {
     width: 90%;
     margin: auto;
     padding-bottom: 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .course-circle-right, .course-circle-left {
@@ -477,7 +514,10 @@ br {
 
 .one-card-content .cv img {
     width: 60%;
-    margin-bottom: 20px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 /* Page contact */
@@ -515,13 +555,10 @@ label {
 }
 
 
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 300px; 
-    padding: 8px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
 }
 
 
@@ -593,5 +630,140 @@ input[type="submit"]:hover {
 @media only screen and (max-width: 700px) {
     .modal-content {
         width: 100%;
+    }
+}
+
+
+
+/* Media Queries pour rendre le site responsive */
+@media only screen and (max-width: 1200px) {
+    .content {
+        padding: 15px;
+    }
+
+    .form, .cv img {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .button-group {
+        flex-direction: column;
+        width: 50%;
+        margin: 15px auto;
+    }
+
+    .button-group button {
+        margin: 10px 0;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.8em;
+    }
+
+    .big-title {
+        margin: 15px 0;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .one-card-content {
+        padding: 15px;
+    }
+
+    p, li {
+        font-size: 14px;
+    }
+
+    .circle p {
+        font-size: 18px;
+    }
+
+    .form {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        justify-content: space-between; /* Réajuster pour les petits écrans */
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    nav .button-navigation {
+        display: none; /* Masquer le menu par défaut */
+        position: fixed; /* Fixe le menu */
+        top: 0; /* Position en haut */
+        left: 0; /* Position à gauche */
+        width: 100vw; /* Largeur pleine */
+        height: 100vh; /* Hauteur pleine */
+        background-color: rgba(0, 0, 0, 0.9); /* Fond semi-transparent */
+        z-index: 1000; /* Pour s'assurer que le menu est au-dessus de tout */
+        flex-direction: column; /* Vertical */
+        align-items: center; /* Centrer le contenu */
+        justify-content: center; /* Centrer verticalement */
+        transition: transform 0.3s ease; /* Transition douce */
+        transform: translateX(-100%); /* Masquer en déplaçant hors de l'écran */
+    }
+    nav .button-navigation ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav .button-navigation ul li {
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        border: none;
+        border-bottom: 1px solid white;
+        color: white; /* Couleur du texte */
+        font-size: 24px; /* Taille de police plus grande */
+    }
+
+    nav .button-navigation ul li:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (min-width: 601px) {
+    .close-button {
+        display: none; /* Cache la croix */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    .form, .cv img {
+        max-width: 100%;
+    }
+
+    .form-group {
+        margin: 10px 0;
+    }
+
+    input[type="text"], input[type="email"], textarea, input[type="submit"] {
+        font-size: 14px;
+    }
+
+     p, li {
+        font-size: 12px;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
     }
 }

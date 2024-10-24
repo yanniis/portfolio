@@ -1,5 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
-  
+
+    const burgerMenu = document.getElementById('burgerMenu');
+    const navMenu = document.querySelector('nav .button-navigation');
+    const closeButton = document.getElementById('closeButton');
+    const navLinks = document.querySelectorAll('nav .button-navigation ul li a'); // Sélectionne tous les liens
+
+    const toggleMenu = () => {
+        navMenu.classList.toggle('active'); // Affiche ou masque le menu
+        document.body.classList.toggle('no-scroll'); // Désactive ou active le défilement
+    };
+
+    burgerMenu.addEventListener('click', toggleMenu);
+    closeButton.addEventListener('click', toggleMenu);
+
+    // Fermer le menu lorsque l'utilisateur clique sur un lien
+    navLinks.forEach(link => {
+        link.addEventListener('click', toggleMenu);
+    });
+
+    
 const whoButton = document.getElementById('whoButton');
 const realButton = document.getElementById('realButton');
 const resumeButton = document.getElementById('resumeButton');
@@ -197,6 +216,7 @@ function changeSlide(carouselName, direction) {
 //         changeSlide(carouselName, 1);
 //     });
 // }, 5000);
+
 
 });
 
