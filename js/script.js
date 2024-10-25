@@ -1,24 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const burgerMenu = document.getElementById('burgerMenu');
-    const navMenu = document.querySelector('nav .button-navigation');
-    const closeButton = document.getElementById('closeButton');
-    const navLinks = document.querySelectorAll('nav .button-navigation ul li a'); // Sélectionne tous les liens
+// Sélection des éléments HTML nécessaires
+const burgerMenu = document.getElementById('burgerMenu');
+const navMenu = document.querySelector('nav .button-navigation');
+const closeButton = document.getElementById('closeButton');
+const navLinks = document.querySelectorAll('nav .button-navigation ul li a');
 
-    const toggleMenu = () => {
+// Fonction pour basculer les classes en fonction de la largeur de l'écran
+const toggleMenu = () => {
+    // Vérifie si la largeur de l'écran est inférieure ou égale à 600px
+    if (window.innerWidth <= 600) {
         navMenu.classList.toggle('active'); // Affiche ou masque le menu
         document.body.classList.toggle('no-scroll'); // Désactive ou active le défilement
-    };
+    }
+};
 
-    burgerMenu.addEventListener('click', toggleMenu);
-    closeButton.addEventListener('click', toggleMenu);
+// Ajout des événements pour le bouton burger et la croix de fermeture
+burgerMenu.addEventListener('click', toggleMenu);
+closeButton.addEventListener('click', toggleMenu);
 
-    // Fermer le menu lorsque l'utilisateur clique sur un lien
-    navLinks.forEach(link => {
-        link.addEventListener('click', toggleMenu);
-    });
+// Fermer le menu lorsque l'utilisateur clique sur un lien dans le menu
+navLinks.forEach(link => {
+    link.addEventListener('click', toggleMenu);
+});
 
-    
+
 const whoButton = document.getElementById('whoButton');
 const realButton = document.getElementById('realButton');
 const resumeButton = document.getElementById('resumeButton');
@@ -72,7 +78,7 @@ contactButton.addEventListener('click', function(event) {
     const closeModal = document.getElementsByClassName("close")[0];
 
     // Lorsque l'utilisateur clique sur une image dans le carrousel
-    document.querySelectorAll('.carousel-image-academic, .carousel-image-academic2, .carousel-image-academic3, .carousel-image-academic4, .carousel-image-academic5, .carousel-image-academic6, .carousel-image-pro, .carousel-image-pro2, .carousel-image-pro3').forEach(img => {
+    document.querySelectorAll('img, .carousel-image-academic, .carousel-image-academic2, .carousel-image-academic3, .carousel-image-academic4, .carousel-image-academic5, .carousel-image-academic6, .carousel-image-pro, .carousel-image-pro2, .carousel-image-pro3').forEach(img => {
         img.addEventListener('click', function() {
             modal.style.display = "block";
             modalImg.src = this.src;
@@ -115,11 +121,15 @@ const CSButton = document.getElementById('CyberSecurite');
 const M3Button = document.getElementById('Musculator');
 const SKButton = document.getElementById('SpeedKing');
 const TPButton = document.getElementById('Typrotect');
+const VSButton = document.getElementById('VacanSports');
+const HEGPButton = document.getElementById('Hospital');
 const CPDiv = document.getElementById('CP');
 const CSDiv = document.getElementById('CS');
 const M3Div = document.getElementById('M3');
 const SKDiv = document.getElementById('SK');
 const TPDiv = document.getElementById('TP');
+const VSDiv = document.getElementById('VS');
+const HEGPDiv = document.getElementById('HEGP');
 
 CPButton.addEventListener('click', function(event) {
     event.preventDefault();
@@ -164,6 +174,18 @@ TPButton.addEventListener('click', function(event) {
     M3Div.style.display = 'none';
     SKDiv.style.display = 'none';
     TPDiv.style.display = 'block';
+})
+
+VSButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    VSDiv.style.display = 'block';
+    HEGPDiv.style.display = 'none';
+})
+
+HEGPButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    VSDiv.style.display = 'none';
+    HEGPDiv.style.display = 'block';
 })
 
 

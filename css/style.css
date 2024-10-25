@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     min-height: 100vh; 
     background-image: url('../img/Contact1.png');
-    background-size: contain;
+    background-size: cover;
     min-height: 1500px;
     background-repeat: no-repeat;
     font-family: 'Poppins';
@@ -111,6 +111,7 @@ nav .button-navigation {
 nav .button-navigation ul {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 nav .button-navigation ul li {
@@ -124,6 +125,10 @@ nav .button-navigation ul li:last-child {
     border-right: none; 
 }
 
+lord-icon {
+    vertical-align: middle;
+}
+
 nav .logo img {
     width: 8%;
     border-radius: 20%;
@@ -134,9 +139,10 @@ nav .logo img {
     display: none;
     flex-direction: column;
     justify-content: space-around;
-    width: 30px;
+    width: 60px;
     height: 25px;
     cursor: pointer;
+    margin: 15px;
 }
 
 .burger-menu span {
@@ -204,6 +210,7 @@ ul li a:hover {
     padding-bottom: 60px;
     width: 80%;
     margin: 100px auto;
+    text-align: center;
 }
 
 .one-card-content {
@@ -247,6 +254,12 @@ ul li a:hover {
         -5px -5px 15px rgba(255, 255, 255, 0.2), /* Faux reflet */
         0 0 20px rgba(255, 0, 255, 0.5); /* Effet lumineux coloré */
     animation: tilt 2s infinite ease-in-out; /* Application de l'animation */
+}
+
+.circle:hover {
+    width: 120px;
+    height: 120px;
+    transition: all 1s ease;
 }
 
 @keyframes tilt {
@@ -414,7 +427,7 @@ br {
 
 /* Carrousel */
 
-#CS, #M3, #SK, #TP {
+#CS, #M3, #SK, #TP, #HEGP {
     display: none;
 }
 
@@ -644,6 +657,26 @@ input[type="submit"]:hover {
     .form, .cv img {
         max-width: 95%;
     }
+
+    .one-card-content .content, .two-card-content .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-container {
+        width: 70%;
+        margin-bottom: 30px;
+    }
+
+    .content-image img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .one-card-content #pro .content p, .one-card-content #academic .content p {
+        width: 90%;
+    }
+
 }
 
 @media (max-width: 800px) {
@@ -658,20 +691,25 @@ input[type="submit"]:hover {
         margin: 10px 0;
     }
 
+    .one-card-content #pro .content p, .one-card-content #academic .content p {
+        width: 100%;
+    }
+
 }
 
 
 @media only screen and (max-width: 768px) {
-    h1, h2 {
-        font-size: 1.8em;
-    }
 
-    .big-title {
-        margin: 15px 0;
+    .big-title h1 {
+        font-size: 1.9em;
     }
 
     .content {
         padding: 10px;
+    }
+
+    .title h2 {
+        font-size: 1.5em;
     }
 
     .one-card-content {
@@ -689,7 +727,15 @@ input[type="submit"]:hover {
     .form {
         padding: 10px;
     }
+
 }
+
+@media (min-width: 601px) {
+    .close-button {
+        display: none; /* Cache la croix */
+    }
+}
+
 
 @media (max-width: 600px) {
     nav {
@@ -722,7 +768,7 @@ input[type="submit"]:hover {
 
     nav .button-navigation ul li {
         padding: 15px 0;
-        width: 100%;
+        width: 80%;
         text-align: center;
         border: none;
         border-bottom: 1px solid white;
@@ -733,11 +779,9 @@ input[type="submit"]:hover {
     nav .button-navigation ul li:last-child {
         border-bottom: none;
     }
-}
 
-@media (min-width: 601px) {
-    .close-button {
-        display: none; /* Cache la croix */
+    .first-course, .second-course, .third-course, .fourth-course {
+        width: 100%;
     }
 }
 
