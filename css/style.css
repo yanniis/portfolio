@@ -128,7 +128,7 @@ nav .button-navigation ul li:last-child {
 lord-icon {
     vertical-align: middle;
 }
-
+  
 nav .logo img {
     width: 8%;
     border-radius: 20%;
@@ -182,7 +182,7 @@ ul li a {
 
 
 ul li a::after {
-    content: ''; /* Nécessaire pour générer un pseudo-élément */
+    content: ''; 
     position: absolute;
     width: 0; 
     height: 2px; 
