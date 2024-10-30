@@ -71,6 +71,7 @@ contactButton.addEventListener('click', function(event) {
 
 // Page réalisation
 
+
     // Sélectionner le modal
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImage");
@@ -130,6 +131,7 @@ const SKDiv = document.getElementById('SK');
 const TPDiv = document.getElementById('TP');
 const VSDiv = document.getElementById('VS');
 const HEGPDiv = document.getElementById('HEGP');
+
 
 CPButton.addEventListener('click', function(event) {
     event.preventDefault();
@@ -239,6 +241,26 @@ function changeSlide(carouselName, direction) {
 //     });
 // }, 5000);
 
+// Fonction de vérification de visibilité pour déclencher l'animation
+const revealOnScroll = () => {
+    // Sélectionner toutes les divs avec les classes .fade-in et .slide-in
+    const divs = document.querySelectorAll('.fade-in, .slide-in');
+  
+    divs.forEach((div) => {
+      const divTop = div.getBoundingClientRect().top;
+      const triggerPoint = window.innerHeight - 100; // Ajuster le point de déclenchement
+  
+      if (divTop < triggerPoint) {
+        div.classList.add('visible');
+      }
+    });
+  };
+  
+  // Détecte le défilement pour déclencher l'animation
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll); // Pour l'initialisation
+  
+  
 
 });
 

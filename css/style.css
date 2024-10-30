@@ -125,6 +125,11 @@ nav .button-navigation ul li:last-child {
     border-right: none; 
 }
 
+nav .button-navigation.active {
+    display: flex; /* Affiche le menu */
+    transform: translateX(0); /* Ramène le menu sur l'écran */
+}
+
 lord-icon {
     vertical-align: middle;
 }
@@ -160,11 +165,6 @@ nav .logo img {
     color: white; /* Couleur de la croix */
     cursor: pointer; /* Change le curseur au survol */
     z-index: 1001; /* S'assure que la croix est au-dessus */
-}
-
-nav .button-navigation.active {
-    display: flex; /* Affiche le menu */
-    transform: translateX(0); /* Ramène le menu sur l'écran */
 }
 
 .content-image img {
@@ -467,7 +467,23 @@ br {
 .carousel-image-pro3 {
     width: 100%;
     border-radius: 10px;
+    transition: transform 0.3s ease;
 }
+
+.carousel-image-academic:hover,
+.carousel-image-academic2:hover, 
+.carousel-image-academic3:hover, 
+.carousel-image-academic4:hover, 
+.carousel-image-academic5:hover, 
+.carousel-image-academic6:hover,  
+.carousel-image-pro:hover,
+.carousel-image-pro2:hover,
+.carousel-image-pro3:hover, 
+.modal img:hover, 
+.content-image img:hover {
+    transition: transform 0.5s ease;
+    transform: scale(1.05);
+  }
 
 .prev, .next {
     position: absolute;
@@ -758,8 +774,6 @@ input[type="submit"]:hover {
         flex-direction: column; /* Vertical */
         align-items: center; /* Centrer le contenu */
         justify-content: center; /* Centrer verticalement */
-        transition: transform 0.3s ease; /* Transition douce */
-        transform: translateX(-100%); /* Masquer en déplaçant hors de l'écran */
     }
     nav .button-navigation ul {
         flex-direction: column;
@@ -811,3 +825,32 @@ input[type="submit"]:hover {
         height: 50px;
     }
 }
+
+
+/* Animation au scroll */
+
+/* CSS pour fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  
+  /* CSS pour slide-in (depuis la gauche) */
+  .slide-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .slide-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
