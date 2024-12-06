@@ -125,11 +125,6 @@ nav .button-navigation ul li:last-child {
     border-right: none; 
 }
 
-nav .button-navigation.active {
-    display: flex; /* Affiche le menu */
-    transform: translateX(0); /* Ramène le menu sur l'écran */
-}
-
 lord-icon {
     vertical-align: middle;
 }
@@ -775,6 +770,12 @@ input[type="submit"]:hover {
         align-items: center; /* Centrer le contenu */
         justify-content: center; /* Centrer verticalement */
     }
+
+    nav .button-navigation.active {
+        display: flex; /* Affiche le menu */
+        transform: translateX(0); /* Ramène le menu sur l'écran */
+    }    
+
     nav .button-navigation ul {
         flex-direction: column;
         width: 100%;
